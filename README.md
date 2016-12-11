@@ -34,12 +34,11 @@ A CTF writeup to read And how to write **Markdown**
 \* Milk
 
 \* Bread
-
-    \* Wholegrain
+* Wholegrain
     
 \* Butter
 
-\1. Tidy the kitchen
+  \\1. Tidy the kitchen
 
 \2. Prepare ingredients  
 
