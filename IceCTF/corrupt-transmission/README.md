@@ -27,4 +27,4 @@ So, just use vim to correct this:
     $ file correct.png 
     correct.png: PNG image data, 500 x 408, 8-bit/color RGBA, non-interlaced
 
-Yep, finally, we have the flag: IceCTF{t1s_but_4_5cr4tch}
+Yep, finally, we have the flag: `IceCTF{t1s_but_4_5cr4tch}`
