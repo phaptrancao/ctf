@@ -66,7 +66,9 @@ When you want to add a quote in Markdown, it’s exactly the same as the formatt
 Prefixing the line with a `>` converts it into a block-quote.
 
 # Intermediate Markdown Formatting
+
 ## Horizontal Rules (The line that divide your article into different sections of text)
+
 \-\-\-
 
 Want to throw-down a quick divider in your article to denote a visual separation between different sections of text? No problem. 3 dashes (\-\-\-) produce:
@@ -76,7 +78,9 @@ Want to throw-down a quick divider in your article to denote a visual separation
 Some text with an inline \`code\` snippet  
 
 \    .my-link {
+
 \        text-decoration: underline;
+
 \    }
 
 Using a single **back-tick** around a word in a sentence, you can show a quick `code` snippet.
@@ -123,7 +127,7 @@ The quick brown fox[^1] jumped over the lazy dog[^2].
 \`\`\`language-javascript
 
     [...]
-    
+
 \`\`\`
 
 
