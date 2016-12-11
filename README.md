@@ -15,9 +15,9 @@ I especially thanks to this [blog](https://blog.ghost.org/markdown "https://blog
 ## Text
 \*italic\* or \_italic\_
 
-\*\*bold\*\* 
+\*\*bold\*\* or \_\_bold\_\_ 
 
-\*\*\*bold-italic\*\*\*
+\*\*\*bold-italic\*\*\* or \_\_\_bold-italic\_\_\_
 
 \[link\](http://example.com)
 
@@ -46,7 +46,7 @@ Markdown images have exactly the same formatting as a link, except they’re pre
 2. Prepare ingredients
 3. Cook delicious things  
 
-For a bullet list, just prefix each like with a * - or - or + and they will be converted to dots. You can also create nested lists; just indent a line with 4 spaces and it will be nested under the line above.
+For a bullet list, just prefix each like with a \*, \- or \+ and they will be converted to dots. You can also create nested lists; just indent a line with 4 spaces and it will be nested under the line above.
 
 * Milk
 * Bread
@@ -67,11 +67,12 @@ Prefixing the line with a `>` converts it into a block-quote.
 
 # Intermediate Markdown Formatting
 
-## Horizontal Rules (The line that divide your article into different sections of text)
+## Horizontal Rules 
+\(The line that divide your article into different sections of text\)
 
 \-\-\-
 
-Want to throw-down a quick divider in your article to denote a visual separation between different sections of text? No problem. 3 dashes (\-\-\-) produce:
+Want to throw-down a quick divider in your article to denote a visual separation between different sections of text? No problem. 3 dashes \(\-\-\-\) produce:
 ---
 
 ## Code Snippets
@@ -126,8 +127,6 @@ The quick brown fox[^1] jumped over the lazy dog[^2].
 
 \`\`\`language-javascript
 
-    [...]
+\    [...]
 
 \`\`\`
-
-
