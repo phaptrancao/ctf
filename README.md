@@ -68,10 +68,11 @@ Prefixing the line with a `>` converts it into a block-quote.
 # Intermediate Markdown Formatting
 
 ## Horizontal Rules 
-\(The line that divide your article into different sections of text\)
+\(The line that divide your article into different sections of text ---\)
 
-\-\-\-
 Want to throw-down a quick divider in your article to denote a visual separation between different sections of text? No problem. 3 dashes \(\-\-\-\) produce:
+
+this shit!
 ---
 
 ## Code Snippets
@@ -129,6 +130,6 @@ The quick brown fox[^1] jumped over the lazy dog[^2].
 
 \`\`\`
 
-    ```import os, sys
-    ```print "hello"
-    ```exit(0)
+```import os, sys
+```print "hello"
+```exit(0)
