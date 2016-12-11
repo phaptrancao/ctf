@@ -2,33 +2,48 @@ A CTF writeup to read And how to write **Markdown**
 # Basic Markdown Formatting
 ## Heading
   \# Heading 1
+  
   \## Heading 2
+  
   \### Heading 3
+  
   ... and so on up to 6
  
 ## Text
   \*italic\*
-  \**bold\**
+  
+  \*\*bold\**
+  
   \*\*\*bold-italic\*\*\*
-  \[link](http://example.com)
+  
+  \[link\](http://example.com)
+  
   \~~stright through~~
+  
   \`inline code\`
+  
   \==Hight light==
 
 ## Images
   \!\[m'lady](http://i.imgur.com/v8IVDka.jpg)
+  
   Markdown images have exactly the same formatting as a link, except they’re prefixed with a !
  
 ## Lists
 
 \* Milk
-* Bread
-    * Wholegrain
-* Butter
 
-\1. Tidy the kitchen  
-2. Prepare ingredients  
-3. Cook delicious things  
+\* Bread
+
+    \* Wholegrain
+    
+\* Butter
+
+\1. Tidy the kitchen
+
+\2. Prepare ingredients  
+
+\3. Cook delicious things  
 
 Lists are a formatting nightmare in HTML, but Markdown lists are incredibly easy to manage. For a bullet list, just prefix each like with a * - or - or + and they will be converted to dots. You can also create nested lists; just indent a line with 4 spaces and it will be nested under the line above.
 
