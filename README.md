@@ -4,33 +4,33 @@ I especially thanks to this [blog](https://blog.ghost.org/markdown "https://blog
 
 # Basic Markdown Formatting
 ## Heading
-  \# Heading 1
-  
-  \#\# Heading 2
-  
-  \#\#\# Heading 3
-  
-  ... and so on up to 6
+\# Heading 1
+
+\#\# Heading 2
+
+\#\#\# Heading 3
+
+... and so on up to 6
  
 ## Text
-  \*italic\*
-  
-  \*\*bold\*\*
-  
-  \*\*\*bold-italic\*\*\*
-  
-  \[link\](http://example.com)
-  
-  \~~stright through\~~
-  
-  \`inline code\`
-  
-  \==oooh fancy\==
+\*italic\* or \_italic\_
+
+\*\*bold\*\* 
+
+\*\*\*bold-italic\*\*\*
+
+\[link\](http://example.com)
+
+\~~stright through\~~
+
+\`inline code\`
+
+==highlight==
 
 ## Images
-  \!\[m'lady](http://i.imgur.com/v8IVDka.jpg)
-  
-  Markdown images have exactly the same formatting as a link, except they’re prefixed with a !
+\!\[m'lady](http://i.imgur.com/v8IVDka.jpg)
+
+Markdown images have exactly the same formatting as a link, except they’re prefixed with a !
  
 ## Lists
 
@@ -57,19 +57,19 @@ For numbered lists, do exactly the same thing - but use numbers!
 
 ## Quotes
 
-  \> To be or not to be, that is the question.
+\> To be or not to be, that is the question.
 
 When you want to add a quote in Markdown, it’s exactly the same as the formatting which you may already be familiar with from your email app of choice when you reply to someone.
 
 > To be or not to be, that is the question.
 
-Prefixing the line with a > converts it into a block-quote.
+Prefixing the line with a `>` converts it into a block-quote.
 
 # Intermediate Markdown Formatting
 ## Horizontal Rules (The line that divide your article into different sections of text)
-\---
+\-\-\-
 
-Want to throw-down a quick divider in your article to denote a visual separation between different sections of text? No problem. 3 dashes (\---) produce:
+Want to throw-down a quick divider in your article to denote a visual separation between different sections of text? No problem. 3 dashes (\-\-\-) produce:
 ---
 
 ## Code Snippets
@@ -84,11 +84,11 @@ Using a single **back-tick** around a word in a sentence, you can show a quick `
 Indenting by **4 spaces** will turn an entire paragraph into a code-block.
 ## Reference Lists & Titles
 
-\*\*The quick brown \[fox][1], jumped over the lazy \[dog][2].\*\*
+\*\*The quick brown \[fox\]\[1\], jumped over the lazy \[dog\]\[2\].\*\*
 
-[1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
+\[1\]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
 
-[2]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
+\[2\]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
 **The quick brown [fox][1], jumped over the lazy [dog][2].**
 
 [1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
@@ -107,11 +107,11 @@ Possibly the coolest feature of Markdown is that it also just supports plain old
 <button class="button-save large">Big Fat Button</button>  
 
 ## Markdown Footnotes
-The quick brown fox\[^1] jumped over the lazy dog\[^2].
+The quick brown fox\[^1\] jumped over the lazy dog\[^2\].
 
-[^1]: Foxes are red
+\[^1\]: Foxes are red
 
-[^2]: Dogs are usually not red
+\[^2\]: Dogs are usually not red
 
 The quick brown fox[^1] jumped over the lazy dog[^2].
 
@@ -121,7 +121,9 @@ The quick brown fox[^1] jumped over the lazy dog[^2].
 ## Syntax Highlighting
 
 \`\`\`language-javascript
-   [...]
+
+    [...]
+    
 \`\`\`
 
 
