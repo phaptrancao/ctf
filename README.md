@@ -129,6 +129,6 @@ The quick brown fox[^1] jumped over the lazy dog[^2].
 
 \`\`\`
 
-    import os, sys
-    print "hello"
-    exit(0)
+    ```import os, sys
+    ```print "hello"
+    ```exit(0)
