@@ -126,10 +126,8 @@ The quick brown fox[^1] jumped over the lazy dog[^2].
 
 \`\`\`import python
 
-	[...]
+    [...]
 
 \`\`\`
 
-```import os, sys
-```print "hello"
-```exit(0)
+Combined with Prism.js in the Ghost theme:
