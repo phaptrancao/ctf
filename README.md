@@ -71,18 +71,15 @@ Prefixing the line with a `>` converts it into a block-quote.
 \(The line that divide your article into different sections of text\)
 
 \-\-\-
-
 Want to throw-down a quick divider in your article to denote a visual separation between different sections of text? No problem. 3 dashes \(\-\-\-\) produce:
 ---
 
 ## Code Snippets
 Some text with an inline \`code\` snippet  
 
-\    .my-link {
-
-\        text-decoration: underline;
-
-\    }
+    .my-link {
+        text-decoration: underline;
+    }
 
 Using a single **back-tick** around a word in a sentence, you can show a quick `code` snippet.
 
@@ -94,6 +91,7 @@ Indenting by **4 spaces** will turn an entire paragraph into a code-block.
 \[1\]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
 
 \[2\]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
+
 **The quick brown [fox][1], jumped over the lazy [dog][2].**
 
 [1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
@@ -125,8 +123,12 @@ The quick brown fox[^1] jumped over the lazy dog[^2].
 
 ## Syntax Highlighting
 
-\`\`\`language-javascript
+\`\`\`import python
 
-\    [...]
+	[...]
 
 \`\`\`
+
+    import os, sys
+    print "hello"
+    exit(0)
