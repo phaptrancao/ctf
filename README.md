@@ -117,6 +117,8 @@ The quick brown fox\[^1\] jumped over the lazy dog\[^2\].
 
 \[^2\]: Dogs are usually not red
 
+> I don't think that Github support footnote
+
 The quick brown fox[^1] jumped over the lazy dog[^2].
 
 [^1]: Foxes are red
