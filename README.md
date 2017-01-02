@@ -124,10 +124,16 @@ The quick brown fox[^1] jumped over the lazy dog[^2].
 
 ## Syntax Highlighting
 
-\`\`\`import python
+\`\`\`python
 
     [...]
 
 \`\`\`
+
+```python
+>>> 5 / 22.5
+>>> type(5 / 2)
+<class 'float'>
+```
 
 Combined with Prism.js in the Ghost theme:
