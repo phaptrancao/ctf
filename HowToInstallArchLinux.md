@@ -7,11 +7,11 @@
 
 Go to www.archlinux.org and download the Arch Linux iso
 
-### 2. burn the iso to a blank disc
+### 2. Burn the iso to a blank disc
 
 #### a. On Linux
 
-Type `sudo dd bs=4M if='path_to_your_iso' of='path_to_your_usb' status=progress  && sync`
+Type `sudo dd bs=4M if='path_to_your_iso' of='path_to_your_usb' status=progress && sync`
 
 Example: asume your usb is in `/dev/sdb` and your `iso` image in your `home`, then type this
 
@@ -21,7 +21,7 @@ sudo dd bs=4M if='/home/username/ArchLinux.iso' of='/dev/sdb' status=progress  &
 
 #### b. On Windows
 
-Use [rufus](https://rufus.akeo.ie) or `ultraiso` to burn your iso to your installation media
+Use [rufus](https://rufus.akeo.ie) or [UltraISO](https://www.ezbsystems.com/ultraiso) to burn your iso to your installation media
 
 #### c. On macOS
 
@@ -37,13 +37,13 @@ And run this command: `sudo dd if='path_to_your_iso' of='/dev/disk3' bs=1M && sy
 
 ### 4. Insert the installation media to your computer
 
-### 5. Iress the key that allows you to change the boot order
+### 5. Press the key that allows you to change the boot order
 
 On most newer computers, this is `F12`. through the exact key should be displayed on the screen during boot up.
 
 ### 6. Select `Boot from Arch Linux (x86_64)`
 
-If you are booting in UEFI mode then choose archiso x86_64 UEFI
+If you are booting in UEFI mode then choose `Archiso x86_64 UEFI`
 
 ### 7. Test internet connection
 
@@ -57,7 +57,7 @@ If you have an **authoried internet access**, you should have to log in to use i
 
 + type `elinks archlinux.org`
 
-+ press the `Esc` key. Press 'o' to open `Options manager`
++ press the `Esc` key. Press `o` to open `Options manager`
 
 + move the cursor to `ECMAScripts` and press the space bar, select the `Enable` field and use right arrow to move to `Edit` option
 
@@ -73,9 +73,9 @@ If you have an **authoried internet access**, you should have to log in to use i
 	
 + type `lsblk` to see the name of your partitions, like `/dev/sda1`. And make note the partitions you use for Arch
 
-+ We use 2 partitions here - one for the OS and one for `/home`. You could also modify more partitions meet your need like for `/boot`, etc... **or** remove `/home` partition, just `root` partition is enough for beginners.
++ We use at least 3 partitions here - one for the OS, one for `/home` and one for `swap`. You could also modify more partitions meet your need like for `/boot`, etc... **or** remove `/home` partition, just `root` partition is enough for beginners.
 
-+ Sometimes you will have `/dev/sda` as your USB installation media and `/dev/sdb` as your main hard drive, the drive you use to install `Arch`. But in this toturial, I will assuming that `/dev/sda` is the disk you want to install Arch Linux.
++ Sometimes you will have `/dev/sda` as your USB installation media and `/dev/sdb` as your main hard drive, the drive you use to install `Arch`. But in this toturial, I will assume that `/dev/sda` is the disk you want to install Arch Linux.
 
 + If you want to erase all your disk to install only Arch Linux, type `sgdisk --zap-all /dev/sda`
 
@@ -83,7 +83,7 @@ If you have an **authoried internet access**, you should have to log in to use i
 
 Type `ls /sys/firmware/efi/efivars`, if the result is `No such file or directory` then your boot mode is `Legacy BIOS`.
 
-### (only `UEFI`) 2. Create GPT partition
+### 2. Create GPT partition (only `UEFI`)
 
 You will need to create an extra EFI partition as well. In this example, we will be creating a Root partition, a Swap partition, a Home partition, and an EFI partition
 
@@ -99,17 +99,17 @@ You will need to create an extra EFI partition as well. In this example, we will
 
 + Select `Write` to write the new partition to the disk. Type `yes` and choose `Quit` to exit `cgdisk`.
 
-### (only `Legacy BIOS`) 3. Create MBR partition
+### 3. Create MBR partition (only `Legacy BIOS`)
 
 Type `cfdisk /dev/sda`
 
 I am going to use `cfdisk` to set up 3 partitions :
 
-+ Root partition, '/dev/sda1' as primary bootable with size of 25G and ext4 formatted
++ Root partition, `/dev/sda1` as primary bootable with size of 25G and ext4 formatted
 
-+ Swap partition, '/dev/sda2' as primary with size half of your RAM
++ Swap partition, `/dev/sda2` as primary with size half of your RAM
 
-+ Logical partition, '/dev/sda5' as your '/home', rest of the space and ext4 formatted.
++ Logical partition, `/dev/sda5` as your '/home', rest of the space and ext4 formatted.
 
 #### Step 1. Create primary partition
 
@@ -267,8 +267,8 @@ Type `systemctl enable dhcpcd`
 Type the following commands to enable it : 
 
 ```bash
-# pacman -S iw wireless_tools wpa_supplicant wpa_actiond dialog
-# systemctl enable netctl-auto
+pacman -S iw wireless_tools wpa_supplicant wpa_actiond dialog
+systemctl enable netctl-auto
 ```
 
 Next time you reboot, type `wifi-menu` to access the wireless menu
@@ -288,18 +288,18 @@ After that, type `pacman -Sy` to refresh your reposity list.
 
 Because being `root` user when using normal task is dangerous, you could distroy your system by mistake when you are `root` user.
 
-Type the following command
+Replace myusername with your username, type the following commands
 
 ```bash
-# useradd -m -g users -G wheel,storage,power -s /bin/bash your_username
-# passwd your_username
+useradd -m -g users -G wheel,storage,power -s /bin/bash myusername
+passwd myusername
 ```
 
 Now install the `sudo` package, `sudo` will let you have `superuser` privilege when you need. Type these commands:
 
 ```bash
-# pacman -S sudo
-# visudo
+pacman -S sudo
+visudo
 ```
 
 Scroll down and uncomment this line: `%wheel ALL=(ALL) ALL`. Save and exit the editor.
@@ -315,8 +315,8 @@ If you're doing **dual boot**, type this : `pacman -S os-prober`
 Type these commands:
 
 ```bash
-# pacman -S grub efibootmgr
-# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch-grub --recheck /dev/sda
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch-grub --recheck /dev/sda
 ```
 
 #### Only Legacy BIOS
@@ -324,8 +324,8 @@ Type these commands:
 Type these commands:
 
 ```bash
-# pacman -S grub-bios
-# grub-install --target=i386-pc --recheck /dev/sda
+pacman -S grub-bios
+grub-install --target=i386-pc --recheck /dev/sda
 ```
 
 #### Both UEFI and BIOS
@@ -333,8 +333,8 @@ Type these commands:
 Type these commands:
 
 ```bash
-# cp /usr/share/locale/en\@quot/LC-MESSAGES/grub.mo /boot/grub/locale/en.mo
-# grub-mkconfig -o /boot/grub/grub.cfg
+cp /usr/share/locale/en\@quot/LC-MESSAGES/grub.mo /boot/grub/locale/en.mo
+grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ### 13. Reboot your computer
@@ -357,41 +357,41 @@ Use the password you created as a normal user to log in.
 
 ### 15. Install GUI : Get Your Desktop Up And Running (XFCE4 as default)
 
-1. Install the X window system
+#### 1. Install the X window system
 
 `sudo pacman -S xorg-server xorg-xinit xorg-server-utils`
 
-2. Get the 3D working
+#### 2. Get the 3D working
 
 `sudo pacman -S mesa`
 
-3. Install the fonts you will need
+#### 3. Install the fonts you will need
 
 `sudo pacman -S ttf-dejavu noto-fonts-cjk noto-fonts`
 
 If you want to install Emoji: `sudo pacman -S noto-fonts-emoji`
 
-4. Enable `AUR` reposity
+#### 4. Enable `AUR` reposity
 
 `AUR` is one of the best of Arch Linux with community maintain packages, type this to enable it: `sudo pacman -S yaourt` 
 
-5. If you want to install Microsoft font
+#### 5. If you want to install Microsoft font
 
 (Do not type `sudo` on this command) `yaourt -S ttf-ms-fonts` and following the guides after that.
 
-6. Install your network manager
+#### 6. Install your network manager
 
 Type this : `sudo pacman -S networkmanager network-manager-applet` and `sudo dhcpcd enable NetworkManager`
 
-7. If you have trouble with `Wi-Fi`
+#### 7. If you have trouble with `Wi-Fi`
 
 Google for install `wifi driver for arch`
 
-8. Disable `root` user account
+#### 8. Disable `root` user account
 
 For safe, type `sudo passwd -dl root`
 
-9. Install XFCE4 Dekstop
+#### 9. Install XFCE4 Dekstop
 
 `sudo pacman -S xfce4 lxdm` and type `1 2 3 4 5 6 8 9 10 11 12 13 14 16`
 
